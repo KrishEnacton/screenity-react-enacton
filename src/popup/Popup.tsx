@@ -1,65 +1,8 @@
-import PopupLogo from '../assets/images/popup/popup-logo.svg'
-import PopupMore from '../assets/images/popup/popup-more.svg'
-import TabOnlyActive from '../assets/images/popup/tab-only-active.svg'
-import Desktop from '../assets/images/popup/desktop.svg'
-import CameraOnly from '../assets/images/popup/camera-only.svg'
+import Layout from './components/core/Layout'
 
 function App() {
   return (
-    <div>
-      <div id="navigation">
-        <div id="logo">
-          <img src={PopupLogo} alt="Logo" />
-          Screenity
-        </div>
-        <div id="more">
-          <img src={PopupMore} alt="More" />
-        </div>
-        <div id="more-select">
-          <a id="shortcuts">Keyboard shortcuts</a>
-          <a id="quality">Smaller file size</a>
-          <a id="fps">60FPS video</a>
-          <a
-            href="https://github.com/alyssaxuu/screenity"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            id="rateextension"
-            href="https://chrome.google.com/webstore/detail/screenity-screen-recorder/kbbdabhdfibnancpjfhlkhafgdilcnji"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Rate extension
-          </a>
-          <a
-            id="madeby"
-            href="https://twitter.com/alyssaxuu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Made by Alyssa X
-          </a>
-        </div>
-      </div>
-      <div id="tabs">
-        <div id="recording-type">
-          <div id="tab-only" className="type type-active">
-            <img src={TabOnlyActive} alt="Tab Only" />
-            <p>Tab only</p>
-          </div>
-          <div id="desktop" className="type">
-            <img src={Desktop} alt="Desktop" />
-            <p>Desktop</p>
-          </div>
-          <div id="camera-only" className="type">
-            <img src={CameraOnly} alt="Camera Only" />
-            <p>Camera only</p>
-          </div>
-        </div>
-      </div>
+    <Layout>
       <div id="body">
         <label htmlFor="camera-select" id="camera-select-label">
           Camera
@@ -93,7 +36,7 @@ function App() {
           <input type="checkbox" id="countdown" />
           <span></span>
           <p id="count-select">
-            <text id="countdown-time">3 </text>
+            <span id="countdown-time">3 </span>
             <label htmlFor="countdown" id="second-label">
               second
             </label>
@@ -134,10 +77,7 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <script src='../js/libraries/jquery-3.5.1.min.js'></script>
-      <script src='../js/libraries/jquery.nice-select.min.js'></script>
-      <script src='../js/popup.js'></script> */}
-    </div>
+    </Layout>
   )
 }
 
