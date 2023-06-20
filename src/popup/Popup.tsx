@@ -1,13 +1,19 @@
+import PopupLogo from '../assets/images/popup/popup-logo.svg'
+import PopupMore from '../assets/images/popup/popup-more.svg'
+import TabOnlyActive from '../assets/images/popup/tab-only-active.svg'
+import Desktop from '../assets/images/popup/desktop.svg'
+import CameraOnly from '../assets/images/popup/camera-only.svg'
+
 function App() {
   return (
     <div>
       <div id="navigation">
         <div id="logo">
-          <img src="../assets/images/popup/popup-logo.svg" alt="Logo" />
+          <img src={PopupLogo} alt="Logo" />
           Screenity
         </div>
         <div id="more">
-          <img src="/assets/images/popup/popup-more.svg" alt="More" />
+          <img src={PopupMore} alt="More" />
         </div>
         <div id="more-select">
           <a id="shortcuts">Keyboard shortcuts</a>
@@ -41,15 +47,15 @@ function App() {
       <div id="tabs">
         <div id="recording-type">
           <div id="tab-only" className="type type-active">
-            <img src="../assets/images/popup/tab-only-active.svg" alt="Tab Only" />
+            <img src={TabOnlyActive} alt="Tab Only" />
             <p>Tab only</p>
           </div>
           <div id="desktop" className="type">
-            <img src="../assets/images/popup/desktop.svg" alt="Desktop" />
+            <img src={Desktop} alt="Desktop" />
             <p>Desktop</p>
           </div>
           <div id="camera-only" className="type">
-            <img src="../assets/images/popup/camera-only.svg" alt="Camera Only" />
+            <img src={CameraOnly} alt="Camera Only" />
             <p>Camera only</p>
           </div>
         </div>
